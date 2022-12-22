@@ -18,7 +18,7 @@ function Navbar() {
   const takeTo = () => {
     window.location.href = `${userTypes.toLowerCase()}`;
   };
-  
+
   return (
     <div className="sticky-top">
       <nav className="navbar gap-2 navbar-dark bg-light p-3 sticky-top">
@@ -26,9 +26,9 @@ function Navbar() {
           style={{ cursor: "pointer" }}
           onClick={takeTo}
           src={logo}
-          alt="Bootstrap"
-          width="100"
-          height="100%"
+          alt="logo"
+          // width="100"
+          height="50"
         />
 
         <div className="text-light ">
