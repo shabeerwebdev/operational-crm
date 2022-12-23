@@ -11,6 +11,12 @@ import "./styles.css";
 import Navbar from "./components/Navbar";
 
 function App() {
+  useEffect(() => {
+    window.addEventListener("offline", () => {
+      alert("You're offline");
+    });
+  });
+
   const ROLES = {
     CUSTOMER: "CUSTOMER",
     ADMIN: "ADMIN",
@@ -51,3 +57,5 @@ function App() {
 }
 
 export default App;
+
+// "react-scripts": "^2.1.3",

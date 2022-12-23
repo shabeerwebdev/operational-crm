@@ -35,18 +35,19 @@ function Auth() {
     e.preventDefault();
     setLoad(true);
     userSignup(auth)
-      .then(function(response) {
+      .then(function (response) {
         if (response.status === 201) {
           setLoad(false);
           setSignup(false);
           setMessage({ success: "User Signed Up Successfully!" });
         }
       })
-      .catch(function(error) {
-        setLoad(false);
+      .catch(function (error) {
+        setLoad(false); // when credentials go wrong
         setMessage({ failure: error.response.data.message });
       });
   };
+
   const loginFn = (e) => {
     e.preventDefault();
     setLoad(true);
@@ -62,37 +63,43 @@ function Auth() {
       })
       .catch((error) => {
         setLoad(false);
-        console.log(error.response.data.message, "here");
+        // console.log(error.response.data.message, "here");
         setMessage({ failure: error.response.data.message });
       });
   };
 
   return (
     <div
-      className="d-flex gradient-background"
+      className="d-flex flex-md-row flex-column gradient-background p-3 gap-3"
       style={{
         minHeight: "100vh",
-        justifyContent: "center",
         alignItems: "center",
+        justifyContent: "space-evenly",
       }}
     >
       <form
         onSubmit={signup ? signupFn : loginFn}
-        style={{ maxWidth: "400px" }}
-        className={`container d-flex flex-column border border-light px-4 py-3 rounded bg-light m-2 ${message.failure &&
-          "shake"} ${message.success && "pulse"}`}
+        style={{
+          maxWidth: "400px",
+          height: "fit-content",
+        }}
+        className={`forms d-flex flex-column border border-light rounded bg-light p-3 ${
+          message.failure && "shake"
+        } ${message.success && "pulse"}`}
       >
         <div className="d-flex row justify-content-evenly align-items-center">
           <img style={{ width: "8rem" }} className="m-2" src={logo} alt="" />
         </div>
 
-        <div
-          className={`${
-            message.success ? "text-success" : "text-danger"
-          } text-center m-4 mt-2`}
-        >
-          {message.failure || message.success}
-        </div>
+        {(message.success || message.failure) && (
+          <div
+            className={`${
+              message.success ? "text-success" : "text-danger"
+            } text-center m-4 mt-2`}
+          >
+            {message.failure || message.success}
+          </div>
+        )}
 
         <div className="form-floating mb-3">
           <input
@@ -206,3 +213,5 @@ function Auth() {
 }
 
 export default Auth;
+
+// px-4 py-3 m-2

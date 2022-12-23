@@ -1,0 +1,28 @@
+Hey guys thank you for visiting my CRM website. This is a React fronrend project i created with technologies including HTML5, CSS3, JS, ReactJs, Bootstrap, etc.. hosted on Netlify. This client-app is backed my Express server hosted on cyclic.sh.
+
+Well, let me give a short gist about CRM. Customer relationship management (CRM) is a technology that allows businesses both large and small to organise, automate, and synchronise every facet of customer interaction. CRM system examples include marketing, sales, customer service, and support.
+
+If you want to see a live demo of this app click here. If you're a React developer you are welcome to clone my project and learn it. Source code. If you're a HR / Manager / CEO looking for a Frontend developer kindly check my resume. im actively looking for a job.
+
+This CRM project is for customer service, and support. Any company can use my CRM client to solve the issues faced by customer.
+
+How it works ?
+As a user if you're facing any problem with a product
+Create an account & Login to this CRM
+You'll be provided with a unique userId to raise any issues
+Click on Raise a ticket to register your issue. Its that simple.
+The company's engineer/ admin will answer your query ASAP as they recieve your ticket.You can come back and check the response anytime.
+You can track the status of your issue on the daskboard (open, closed, pending)
+
+Features
+A highly protected Token based Authentication system, ensuring your privacy (closing the tab or inactivity on the site will logs you out)
+This application is responsive on different devices incliding mobile phones
+A clean UI with a circular- progressbar to track your tickets
+A highly dynamic Material-Table to list all your tickets which will help you to sort items and export your tickets in CSV / PDF
+
+As soon a ticket is raised by the customer, it is assigned to an engineer
+
+Login can be done as Customer or Engineer.
+By default engineer usertype is set to pending status which will be approved by admin later.
+All the tickets raised by customer is assigned to any one engineer in the organisation.
+He has the permissions to read and reply to a query and close the ticket. After which the response is reflected the customers daskboard and UI is updated.
